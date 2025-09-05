@@ -20,3 +20,17 @@ You must filter the data in order to:
 identify the source and destination IP addresses involved in this web browsing session,
 examine the protocols that are used when the user makes the connection to the website, and
 analyze some of the data packets to identify the type of information sent and received by the systems that connect to each other when the network data is captured.
+
+## Task 1. Explore data with Wireshark
+Opened a network packet capture file that contains data captured from a system that made web requests to a site.
+overview of the key property columns listed for each packet:
+
+<img width="1920" height="932" alt="47" src="https://github.com/user-attachments/assets/ce2fd91e-5ddd-4d7f-b21e-cebb5f372f00" />
+
+- No. : The index number of the packet in this packet capture file
+- Time: The timestamp of the packet
+- Source: The source IP address
+- Destination: The destination IP address
+- Protocol: The protocol contained in the packet
+- Length: The total length of the packet
+- Info: Some infomation about the data in the packet (the payload) as interpreted by Wireshark
