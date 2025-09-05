@@ -34,3 +34,43 @@ overview of the key property columns listed for each packet:
 - Protocol: The protocol contained in the packet
 - Length: The total length of the packet
 - Info: Some infomation about the data in the packet (the payload) as interpreted by Wireshark
+# Network Analysis — Analyze Your First Packet
+
+This report was completed as part of the Google Cybersecurity Certificate. It documents how to analyze a packet capture file using Wireshark. These tasks are essential for network monitoring, incident response, and foundational packet analysis skills.
+
+---
+
+## My Contributions
+
+### Open and Inspect a Packet Capture File
+- Launched the lab environment via Qwiklabs.
+- Opened Wireshark on the Windows virtual machine.
+- Loaded the provided `.pcap` file for analysis.
+
+### Examine Packet Information
+- Identified the first packet in the capture.
+- Reviewed key fields including:
+  - Source and Destination IP addresses
+  - Protocol type (e.g., TCP, UDP, ICMP)
+  - Packet length and timestamp
+- Interpreted header details such as Ethernet, IP, and TCP layers.
+
+### Apply Display Filters
+- Used Wireshark filters to isolate specific traffic:
+  - `http` to view web traffic
+  - `ip.addr == 192.168.1.1` to focus on a particular host
+- Analyzed filtered packets to understand communication flow.
+
+---
+
+## Tools Used
+- **Wireshark** — to open and analyze packet capture files
+- **Display Filters** — to narrow down traffic types and hosts
+- **Packet Details Pane** — to inspect protocol layers and payloads
+
+---
+
+## Reflections
+- Opening a `.pcap` file and navigating Wireshark simulated real-world network forensics.
+- Understanding packet structure reinforced foundational knowledge of network protocols.
+- Applying filters demonstrated how analysts isolate relevant traffic during investigations.
