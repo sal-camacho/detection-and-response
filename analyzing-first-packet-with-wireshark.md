@@ -23,10 +23,10 @@ analyze some of the data packets to identify the type of information sent and re
 
 ## Task 1. Explore data with Wireshark
 Opened a network packet capture file that contains data captured from a system that made web requests to a site.
-overview of the key property columns listed for each packet:
 
 <img width="1920" height="932" alt="47" src="https://github.com/user-attachments/assets/ce2fd91e-5ddd-4d7f-b21e-cebb5f372f00" />
 
+### An overview of the key property columns listed for each packet:
 - No. : The index number of the packet in this packet capture file
 - Time: The timestamp of the packet
 - Source: The source IP address
@@ -34,7 +34,8 @@ overview of the key property columns listed for each packet:
 - Protocol: The protocol contained in the packet
 - Length: The total length of the packet
 - Info: Some infomation about the data in the packet (the payload) as interpreted by Wireshark
-# Network Analysis — Analyze Your First Packet
+
+## Network Analysis — Analyze Your First Packet
 
 This report was completed as part of the Google Cybersecurity Certificate. It documents how to analyze a packet capture file using Wireshark. These tasks are essential for network monitoring, incident response, and foundational packet analysis skills.
 
@@ -60,15 +61,11 @@ This report was completed as part of the Google Cybersecurity Certificate. It do
   - `http` to view web traffic
   - `ip.addr == 192.168.1.1` to focus on a particular host
 - Analyzed filtered packets to understand communication flow.
-
----
-
+- 
 ## Tools Used
 - **Wireshark** — to open and analyze packet capture files
 - **Display Filters** — to narrow down traffic types and hosts
 - **Packet Details Pane** — to inspect protocol layers and payloads
-
----
 
 ## Reflections
 - Opening a `.pcap` file and navigating Wireshark simulated real-world network forensics.
