@@ -152,12 +152,12 @@ Double-clicked the first packet in the list. The Destination IP address of this 
 ### Question: What is the Destination Address as specified in the Internet Protocol Version 4 subtree?
 #### Answer: The Destination Address is 169.254.169.254. This property is defined in the Internet Protocol Version 4 subtree, which is the third subtree listed in the detailed packet inspection window.
 
-Entered the following filter to select TCP packet data that contains specific text data: `tcp contains "curl"`
-This filtered the packets containing web requests made with the curl command in this sample packet capture file.
+Entered the following filter to select TCP packet data that contains specific text data: `tcp contains "curl"`.
+This filtered the packets containing web requests made with the curl command
 
 <img width="744" height="581" alt="61" src="https://github.com/user-attachments/assets/c20794eb-85fe-4fff-ad7c-015eca1b83ee" />
 
-Lastly, I double-clicked the first packet in the list with the filter containing web requests made with the curl command.
+Lastly, I double-clicked the first packet in the list with the filter to ensure it containined the web requests made with the curl command.
 
 <img width="761" height="871" alt="62" src="https://github.com/user-attachments/assets/a89d7b0b-654b-49d0-92b8-9d9e7a7eeb19" />
 
