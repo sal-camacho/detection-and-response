@@ -30,6 +30,9 @@ analyze some of the data packets to identify the type of information sent and re
 - Length: The total length of the packet
 - Info: Some infomation about the data in the packet (the payload) as interpreted by Wireshark
 
+## Network Analysis — Analyze Your First Packet
+
+This analysis was completed as part of the Google Cybersecurity Certificate. It documents how to analyze a packet capture file using Wireshark. These tasks are essential for network monitoring, incident response, and foundational packet analysis skills.
 
 ## Task 1. Explore data with Wireshark
 Opened a network packet capture file that contains data captured from a system that made web requests to a site and scrolled down the packet list until a packet is listed where the info column starts with the words 'Echo (ping) request'.
@@ -40,13 +43,17 @@ Opened a network packet capture file that contains data captured from a system t
 ### Question: What is the protocol of the first packet in the list where the info column starts with the words 'Echo (ping) request'?
 ### Answer: ICMP
 
-## Network Analysis — Analyze Your First Packet
-
-This analysis was completed as part of the Google Cybersecurity Certificate. It documents how to analyze a packet capture file using Wireshark. These tasks are essential for network monitoring, incident response, and foundational packet analysis skills.
-
 ## Task 2. Apply a basic Wireshark filter and inspect a packet
-Opened a packet in Wireshark for more detailed exploration and filter the data to inspect the network layers and protocols contained in the packet.
-Entered the following filter for traffic associated with a specific IP address. ip.addr == 142.250.1.139
+Opened a packet in Wireshark for more detailed exploration and filtered the data to inspect the network layers and protocols contained in the packet.
+Entered the following filter for traffic associated with a specific IP address. `ip.addr == 142.250.1.139`
+
+<img width="753" height="560" alt="49" src="https://github.com/user-attachments/assets/94deaee4-ac58-4f8b-b38f-321f8d52cbcf" />
+
+Double-clicked the first packet that lists TCP as the protocol. This opened a packet details pane window:
+<img width="758" height="588" alt="50" src="https://github.com/user-attachments/assets/7ed9809b-f881-4aaa-8990-7139ad19b665" />
+icked the first packet that lists TCP as the protocol. This opened a packet details pane window:
+
+
 ---
 
 ## My Contributions
