@@ -102,7 +102,7 @@ Double-clicked the first packet in the list
 
 <img width="744" height="623" alt="55" src="https://github.com/user-attachments/assets/0031b2b6-d0b1-46ae-9e49-e902827033c6" />
 
-(The MAC address you specified in the filter is listed as either the source or destination address in the expanded Ethernet II subtree.)
+(The MAC address I specified in the filter is listed as either the source or destination address in the expanded Ethernet II subtree.)
 
 #### Double-clicked the Internet Protocol Version 4 subtree to expand it and scroll down until the Time to Live and Protocol fields appear.
 - The Protocol field in the Internet Protocol Version 4 subtree indicates which IP internal protocol is contained in the packet.
@@ -150,7 +150,7 @@ Double-clicked the first packet in the list. The Destination IP address of this 
 ### Question: What is the Frame Length of the packet as specified in the Frame subtree?
 #### Answer: The Frame Length is 54 bytes. This property is contained in the Frame subtree, which is the first subtree listed in the detailed packet inspection window.
 ### Question: What is the Header Length of the packet as specified in the Internet Protocol Version 4 subtree?
-#### Answer: The Header Length is 20 bytes. This property is defined in the Internet Protocol Version 4 subtree, which is the fourth subtree listed in the detailed packet inspection window.
+#### Answer: The Header Length is 20 bytes. This property is defined in the Internet Protocol Version 4 subtree, which is the third subtree listed in the detailed packet inspection window.
 ### Question: What is the Destination Address as specified in the Internet Protocol Version 4 subtree?
 #### Answer: The Destination Address is 169.254.169.254. This property is defined in the Internet Protocol Version 4 subtree, which is the third subtree listed in the detailed packet inspection window.
 
@@ -179,7 +179,7 @@ Lastly, I double-clicked the first packet in the filtered list to verify that it
 
 ### Apply Display Filters
 - Used Wireshark filters to isolate specific traffic:
-  - `tcp.port == 80` to isolate HTTP traffic and examine web requests sent via the curl command
+  - `tcp contains "curl"` to find the web request
   - `ip.addr == 192.168.1.1` to focus on a particular host
 - Analyzed filtered packets to understand communication flow.
 
