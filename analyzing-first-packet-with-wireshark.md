@@ -43,7 +43,7 @@ Scrolled down to the packet list until a packet is listed where the info column 
 <img width="746" height="563" alt="48" src="https://github.com/user-attachments/assets/aabbb053-f058-4df6-a602-0c2065e98449" />
 
 ### Question: What is the protocol of the first packet in the list where the info column starts with the words 'Echo (ping) request'?
-### Answer: ICMP
+#### Answer: ICMP
 
 ## Task 2. Apply a basic Wireshark filter and inspect a packet
 Opened a packet in Wireshark for more detailed exploration and filtered the data to inspect the network layers and protocols contained in the packet.
@@ -71,7 +71,7 @@ The upper section of this window contains subtrees where Wireshark will provide 
 - The source port and destination port listed here match the source and destination ports in the info column of the summary display for this packet in the list of all of the packets in the main Wireshark window.
 
 ### Question: What is the TCP destination port of this TCP packet?
-### Answer: Port 80 is the TCP destination port for this packet. It contains the initial web request to an HTTP website that will typically be listening on TCP port 80.
+#### Answer: Port 80 is the TCP destination port for this packet. It contains the initial web request to an HTTP website that will typically be listening on TCP port 80.
 
 #### In the Transmission Control Protocol subtree, scroll down and double-click Flags.
 - This provides a detailed view of the TCP flags set in this packet.
@@ -106,7 +106,7 @@ Double-clicked the first packet in the list
 - The Protocol field in the Internet Protocol Version 4 subtree indicates which IP internal protocol is contained in the packet.
 
 ### Question: What is the protocol contained in the Internet Protocol Version 4 subtree from the first packet related to MAC address 42:01:ac:15:e0:02?
-### Answer: TCP is the internal protocol contained in the first packet from MAC address 42:01:ac:15:e0:02.
+#### Answer: TCP is the internal protocol contained in the first packet from MAC address 42:01:ac:15:e0:02.
 
 ## Task 4. Use filters to explore DNS packets
 Used filters to select and examine DNS traffic. Once I selected sample DNS traffic, I drilled down into the protocol to examine how the DNS packet data contains both queries (names of internet sites that are being looked up) and answers (IP addresses that are being sent back by a DNS server when a name is successfully resolved).
@@ -129,7 +129,7 @@ Entered the following filter to select UDP port 53 traffic. DNS traffic uses UDP
 <img width="1175" height="881" alt="58" src="https://github.com/user-attachments/assets/f947f71c-5306-4427-acae-ad9c225efa51" />
 
 ### Question: Which of these IP addresses is displayed in the expanded Answers section for the DNS query for opensource.google.com?
-### Answer: The IP address 142.250.1.139 is displayed in the expanded Answers section for the DNS query for opensource.google.com.
+#### Answer: The IP address 142.250.1.139 is displayed in the expanded Answers section for the DNS query for opensource.google.com.
   
 ### Task 5. Use filters to explore TCP packets
 Used additional filters to select and examine TCP packets. Learned how to search for text that is present in payload data contained inside network packets. This will locate packets based on something such as a name or some other text that is of my interest.
@@ -139,26 +139,29 @@ Enter the following filter to select TCP port 80 traffic. TCP port 80 is the def
 
 (Quite a few packets were created when the user accessed the web page http://opensource.google.com.)
 
-#### Double-clicked the first packet in the list. The Destination IP address of this packet is 169.254.169.254.
+Double-clicked the first packet in the list. The Destination IP address of this packet is 169.254.169.254.
 
 <img width="745" height="898" alt="60" src="https://github.com/user-attachments/assets/bcb06fbb-a28e-47cf-acb4-934ce3f6fecc" />
 
 ### Question: What is the Time to Live value of the packet as specified in the Internet Protocol Version 4 subtree?
 #### Answer: The Time to Live value is 64. This property is contained in the Internet Protocol Version 4 subtree, which is the third subtree listed in the detailed packet inspection window.
-#### Question: What is the Frame Length of the packet as specified in the Frame subtree?
+### Question: What is the Frame Length of the packet as specified in the Frame subtree?
 #### Answer: The Frame Length is 54 bytes. This property is contained in the Frame subtree, which is the first subtree listed in the detailed packet inspection window.
-#### Question: What is the Header Length of the packet as specified in the Internet Protocol Version 4 subtree?
+### Question: What is the Header Length of the packet as specified in the Internet Protocol Version 4 subtree?
 #### Answer: The Header Length is 20 bytes. This property is defined in the Internet Protocol Version 4 subtree, which is the fourth subtree listed in the detailed packet inspection window.
-#### Question: What is the Destination Address as specified in the Internet Protocol Version 4 subtree?
+### Question: What is the Destination Address as specified in the Internet Protocol Version 4 subtree?
 #### Answer: The Destination Address is 169.254.169.254. This property is defined in the Internet Protocol Version 4 subtree, which is the third subtree listed in the detailed packet inspection window.
 
-#### Entered the following filter to select TCP packet data that contains specific text data.
+Entered the following filter to select TCP packet data that contains specific text data: `tcp contains "curl"`
+This filtered the packets containing web requests made with the curl command in this sample packet capture file.
 
 <img width="744" height="581" alt="61" src="https://github.com/user-attachments/assets/c20794eb-85fe-4fff-ad7c-015eca1b83ee" />
 
-#### Double-clicked the first packet in the list.
+Lastly, I double-clicked the first packet in the list with the filter containing web requests made with the curl command.
 
 <img width="761" height="871" alt="62" src="https://github.com/user-attachments/assets/a89d7b0b-654b-49d0-92b8-9d9e7a7eeb19" />
+
+---
 
 ## My Contributions
 
