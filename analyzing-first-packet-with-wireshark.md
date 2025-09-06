@@ -179,10 +179,10 @@ Lastly, I double-clicked the first packet in the filtered list to verify that it
 
 ### Apply Display Filters
 - Used Wireshark filters to isolate specific traffic:
-  - `http` to view web traffic
+  - `tcp.port == 80` to isolate HTTP traffic and examine web requests sent via the curl command
   - `ip.addr == 192.168.1.1` to focus on a particular host
 - Analyzed filtered packets to understand communication flow.
-- 
+
 ## Tools Used
 - **Wireshark** — to open and analyze packet capture files
 - **Display Filters** — to narrow down traffic types and hosts
