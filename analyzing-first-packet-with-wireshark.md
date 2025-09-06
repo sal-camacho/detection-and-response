@@ -35,9 +35,12 @@ analyze some of the data packets to identify the type of information sent and re
 This analysis was completed as part of the Google Cybersecurity Certificate. It documents how to analyze a packet capture file using Wireshark. These tasks are essential for network monitoring, incident response, and foundational packet analysis skills.
 
 ## Task 1. Explore data with Wireshark
-Opened a network packet capture file that contains data captured from a system that made web requests to a site and scrolled down to the packet list until a packet is listed where the info column starts with the words 'Echo (ping) request'.
+Opened a network packet capture file that contains data captured from a system that made web requests to a site.
 
 <img width="1920" height="932" alt="47" src="https://github.com/user-attachments/assets/ce2fd91e-5ddd-4d7f-b21e-cebb5f372f00" />
+
+Scrolled down to the packet list until a packet is listed where the info column starts with the words 'Echo (ping) request'.
+
 <img width="746" height="563" alt="48" src="https://github.com/user-attachments/assets/aabbb053-f058-4df6-a602-0c2065e98449" />
 
 ### Question: What is the protocol of the first packet in the list where the info column starts with the words 'Echo (ping) request'?
@@ -52,6 +55,37 @@ Entered the following filter for traffic associated with a specific IP address. 
 Double-clicked the first packet that lists TCP as the protocol. This opened a packet details pane window:
 
 <img width="758" height="588" alt="50" src="https://github.com/user-attachments/assets/7ed9809b-f881-4aaa-8990-7139ad19b665" />
+
+The upper section of this window contains subtrees where Wireshark will provide you with an analysis of the various parts of the network packet. The lower section of the window contains the raw packet data displayed in hexadecimal and ASCII text. There is also placeholder text for fields where the character data does not apply, as indicated by the dot (“.”).
+
+## Task 2A. Navigating through subtrees
+
+#### Double-click the first subtree in the upper section. This starts with the word Frame.
+- This provides you with details about the overall network packet, or frame, including the frame length and the arrival time of the packet. At this level, you’re viewing information about the entire packet of data.
+#### Double-click Frame again to collapse the subtree and then double-click the Ethernet II subtree.
+- This item contains details about the packet at the Ethernet level, including the source and destination MAC addresses and the type of internal protocol that the Ethernet packet contains.
+#### Double-click Ethernet II again to collapse that subtree and then double-click the Internet Protocol Version 4 subtree.
+- This provides packet data about the Internet Protocol (IP) data contained in the Ethernet packet. It contains information such as the source and destination IP addresses and the Internal Protocol (for example, TCP or UDP), which is carried inside the IP packet.
+- The source and destination IP addresses shown here match the source and destination IP addresses in the summary display for this packet in the main Wireshark window.
+#### Double-click Internet Protocol Version 4 again to collapse that subtree and then double-click the Transmission Control Protocol subtree.
+- This provides detailed information about the TCP packet, including the source and destination TCP ports, the TCP sequence numbers, and the TCP flags.
+- The source port and destination port listed here match the source and destination ports in the info column of the summary display for this packet in the list of all of the packets in the main Wireshark window.
+
+### Question: What is the TCP destination port of this TCP packet?
+### Answer: Port 80 is the TCP destination port for this packet. It contains the initial web request to an HTTP website that will typically be listening on TCP port 80.
+
+#### In the Transmission Control Protocol subtree, scroll down and double-click Flags.
+- This provides a detailed view of the TCP flags set in this packet.
+
+<img width="965" height="900" alt="51" src="https://github.com/user-attachments/assets/f0fa7382-1dec-4747-9c4c-04252571ac1c" />
+
+## Task 3. Use filters to select packets
+Used filters to analyze specific network packets based on where the packets came from or where they were sent to. You’ll explore how to select packets using either their physical Ethernet Media Access Control (MAC) address or their Internet Protocol (IP) address.
+Enter the following filter to select traffic for a specific source IP address only. `ip.src == 142.250.1.139`
+
+
+
+
 
 
 
