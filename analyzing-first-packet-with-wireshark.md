@@ -56,12 +56,12 @@ Double-clicked the first packet that lists TCP as the protocol. This opened a pa
 
 <img width="758" height="588" alt="50" src="https://github.com/user-attachments/assets/7ed9809b-f881-4aaa-8990-7139ad19b665" />
 
-The upper section of this window contains subtrees where Wireshark will provide you with an analysis of the various parts of the network packet. The lower section of the window contains the raw packet data displayed in hexadecimal and ASCII text. There is also placeholder text for fields where the character data does not apply, as indicated by the dot (“.”).
+The upper section of this window contains subtrees where Wireshark will provide me with an analysis of the various parts of the network packet. The lower section of the window contains the raw packet data displayed in hexadecimal and ASCII text. There is also placeholder text for fields where the character data does not apply, as indicated by the dot (“.”).
 
 ## Task 2A. Navigating through subtrees
 
 #### Double-click the first subtree in the upper section. This starts with the word Frame.
-- This provides you with details about the overall network packet, or frame, including the frame length and the arrival time of the packet. At this level, you’re viewing information about the entire packet of data.
+- This provides you with details about the overall network packet, or frame, including the frame length and the arrival time of the packet. At this level, I'm viewing information about the entire packet of data.
 #### Double-click Frame again to collapse the subtree and then double-click the Ethernet II subtree.
 - This item contains details about the packet at the Ethernet level, including the source and destination MAC addresses and the type of internal protocol that the Ethernet packet contains.
 #### Double-click Ethernet II again to collapse that subtree and then double-click the Internet Protocol Version 4 subtree.
@@ -80,7 +80,7 @@ The upper section of this window contains subtrees where Wireshark will provide 
 <img width="965" height="900" alt="51" src="https://github.com/user-attachments/assets/f0fa7382-1dec-4747-9c4c-04252571ac1c" />
 
 ## Task 3. Use filters to select packets
-Used filters to analyze specific network packets based on where the packets came from or where they were sent to. You’ll explore how to select packets using either their physical Ethernet Media Access Control (MAC) address or their Internet Protocol (IP) address.
+Used filters to analyze specific network packets based on where the packets came from or where they were sent to. Explored how to select packets using either their physical Ethernet Media Access Control (MAC) address or their Internet Protocol (IP) address.
 Entered the following filter to select traffic for a specific source IP address only: `ip.src == 142.250.1.139`
 
 <img width="751" height="591" alt="52" src="https://github.com/user-attachments/assets/ff4e19e1-53ac-49ef-b6a0-10a9502ea4cd" />
@@ -104,11 +104,16 @@ Double-clicked the first packet in the list
 
 (The MAC address you specified in the filter is listed as either the source or destination address in the expanded Ethernet II subtree.)
 
-#### Double-click the Internet Protocol Version 4 subtree to expand it and scroll down until the Time to Live and Protocol fields appear.
+#### Double-clicked the Internet Protocol Version 4 subtree to expand it and scroll down until the Time to Live and Protocol fields appear.
 - The Protocol field in the Internet Protocol Version 4 subtree indicates which IP internal protocol is contained in the packet.
 
 ### What is the protocol contained in the Internet Protocol Version 4 subtree from the first packet related to MAC address 42:01:ac:15:e0:02?
 ### Answer: TCP is the internal protocol contained in the first packet from MAC address 42:01:ac:15:e0:02.
+
+## Task 4. Use filters to explore DNS packets
+Used filters to select and examine DNS traffic. Once I‘ve selected sample DNS traffic, I’ll drill down into the protocol to examine how the DNS packet data contains both queries (names of internet sites that are being looked up) and answers (IP addresses that are being sent back by a DNS server when a name is successfully resolved).
+
+
 
 
 ---
