@@ -8,7 +8,6 @@ Now you’ll use Wireshark to inspect packet data and apply filters to sort thro
 
 In this activity, you’ll use Wireshark to examine a sample packet capture file and filter the network traffic data.
 
-
 ## Scenario
 
 In this scenario, you’re a security analyst investigating traffic to a website.
@@ -61,7 +60,7 @@ The upper section of this window contains subtrees where Wireshark will provide 
 ## Task 2A. Navigating through subtrees
 
 #### Double-click the first subtree in the upper section. This starts with the word Frame.
-- This provides you with details about the overall network packet, or frame, including the frame length and the arrival time of the packet. At this level, I'm viewing information about the entire packet of data.
+- This provides me with details about the overall network packet, or frame, including the frame length and the arrival time of the packet. At this level, I'm viewing information about the entire packet of data.
 #### Double-click Frame again to collapse the subtree and then double-click the Ethernet II subtree.
 - This item contains details about the packet at the Ethernet level, including the source and destination MAC addresses and the type of internal protocol that the Ethernet packet contains.
 #### Double-click Ethernet II again to collapse that subtree and then double-click the Internet Protocol Version 4 subtree.
@@ -93,7 +92,6 @@ Entered the following filter to select traffic for a specific destination IP add
 
 (A filtered list is returned that contains only packets that were sent to 142.250.1.139.)
 
-
 Entered the following filter to select traffic to or from a specific Ethernet MAC address. This filters traffic related to one MAC address, regardless of the other protocols involved: `eth.addr == 42:01:ac:15:e0:02`
 
 <img width="750" height="586" alt="54" src="https://github.com/user-attachments/assets/b3d7baef-e963-4994-9fa0-adc6f3d11c3a" />
@@ -107,16 +105,60 @@ Double-clicked the first packet in the list
 #### Double-clicked the Internet Protocol Version 4 subtree to expand it and scroll down until the Time to Live and Protocol fields appear.
 - The Protocol field in the Internet Protocol Version 4 subtree indicates which IP internal protocol is contained in the packet.
 
-### What is the protocol contained in the Internet Protocol Version 4 subtree from the first packet related to MAC address 42:01:ac:15:e0:02?
+### Question: What is the protocol contained in the Internet Protocol Version 4 subtree from the first packet related to MAC address 42:01:ac:15:e0:02?
 ### Answer: TCP is the internal protocol contained in the first packet from MAC address 42:01:ac:15:e0:02.
 
 ## Task 4. Use filters to explore DNS packets
-Used filters to select and examine DNS traffic. Once I‘ve selected sample DNS traffic, I’ll drill down into the protocol to examine how the DNS packet data contains both queries (names of internet sites that are being looked up) and answers (IP addresses that are being sent back by a DNS server when a name is successfully resolved).
+Used filters to select and examine DNS traffic. Once I selected sample DNS traffic, I drilled down into the protocol to examine how the DNS packet data contains both queries (names of internet sites that are being looked up) and answers (IP addresses that are being sent back by a DNS server when a name is successfully resolved).
+Entered the following filter to select UDP port 53 traffic. DNS traffic uses UDP port 53, so this will list traffic related to DNS queries and responses only: `udp.port == 53`
 
+<img width="747" height="581" alt="56" src="https://github.com/user-attachments/assets/d8b203a1-117f-4182-88e1-6992fc37dedd" />
 
+#### Double-clicked the first packet in the list to open the detailed packet window.
+- Scrolled down and double-click the Domain Name System (query) subtree to expand it.
+- Scrolled down and double-click Queries.
+- I notice that the name of the website that was queried is opensource.google.com.
 
+<img width="771" height="866" alt="57" src="https://github.com/user-attachments/assets/d2745257-f2e7-48e6-b95b-e54fc290f984" />
 
----
+#### Double-clicked the fourth packet in the list to open the detailed packet window.
+- Scrolled down and double-click the Domain Name System (query) subtree to expand it.
+- Scrolled down and double-click Answers, which is in the Domain Name System (query) subtree.
+- The Answers data included the name that was queried (opensource.google.com) and the addresses that are associated with that name.
+
+<img width="1175" height="881" alt="58" src="https://github.com/user-attachments/assets/f947f71c-5306-4427-acae-ad9c225efa51" />
+
+### Question: Which of these IP addresses is displayed in the expanded Answers section for the DNS query for opensource.google.com?
+### Answer: The IP address 142.250.1.139 is displayed in the expanded Answers section for the DNS query for opensource.google.com.
+  
+### Task 5. Use filters to explore TCP packets
+Used additional filters to select and examine TCP packets. Learned how to search for text that is present in payload data contained inside network packets. This will locate packets based on something such as a name or some other text that is of my interest.
+Enter the following filter to select TCP port 80 traffic. TCP port 80 is the default port that is associated with web traffic: `tcp.port == 80`
+
+<img width="748" height="578" alt="59" src="https://github.com/user-attachments/assets/0206e546-75ee-4b25-a290-472673b90519" />
+
+(Quite a few packets were created when the user accessed the web page http://opensource.google.com.)
+
+#### Double-clicked the first packet in the list. The Destination IP address of this packet is 169.254.169.254.
+
+<img width="745" height="898" alt="60" src="https://github.com/user-attachments/assets/bcb06fbb-a28e-47cf-acb4-934ce3f6fecc" />
+
+### Question: What is the Time to Live value of the packet as specified in the Internet Protocol Version 4 subtree?
+#### Answer: The Time to Live value is 64. This property is contained in the Internet Protocol Version 4 subtree, which is the third subtree listed in the detailed packet inspection window.
+#### Question: What is the Frame Length of the packet as specified in the Frame subtree?
+#### Answer: The Frame Length is 54 bytes. This property is contained in the Frame subtree, which is the first subtree listed in the detailed packet inspection window.
+#### Question: What is the Header Length of the packet as specified in the Internet Protocol Version 4 subtree?
+#### Answer: The Header Length is 20 bytes. This property is defined in the Internet Protocol Version 4 subtree, which is the fourth subtree listed in the detailed packet inspection window.
+#### Question: What is the Destination Address as specified in the Internet Protocol Version 4 subtree?
+#### Answer: The Destination Address is 169.254.169.254. This property is defined in the Internet Protocol Version 4 subtree, which is the third subtree listed in the detailed packet inspection window.
+
+#### Entered the following filter to select TCP packet data that contains specific text data.
+
+<img width="744" height="581" alt="61" src="https://github.com/user-attachments/assets/c20794eb-85fe-4fff-ad7c-015eca1b83ee" />
+
+#### Double-clicked the first packet in the list.
+
+<img width="761" height="871" alt="62" src="https://github.com/user-attachments/assets/a89d7b0b-654b-49d0-92b8-9d9e7a7eeb19" />
 
 ## My Contributions
 
