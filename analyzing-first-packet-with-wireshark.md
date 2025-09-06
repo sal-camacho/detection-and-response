@@ -29,6 +29,8 @@ analyze some of the data packets to identify the type of information sent and re
 - Length: The total length of the packet
 - Info: Some infomation about the data in the packet (the payload) as interpreted by Wireshark
 
+---
+
 ## Network Analysis — Analyze Your First Packet
 
 This analysis was completed as part of the Google Cybersecurity Certificate. It documents how to analyze a packet capture file using Wireshark. These tasks are essential for network monitoring, incident response, and foundational packet analysis skills.
@@ -159,8 +161,6 @@ Entered the following filter to select TCP packet data that contains specific te
 Lastly, I double-clicked the first packet in the filtered list to verify that it contained the web request initiated by the curl command.
 
 <img width="761" height="871" alt="62" src="https://github.com/user-attachments/assets/a89d7b0b-654b-49d0-92b8-9d9e7a7eeb19" />
-
----
 
 ## My Contributions
 
