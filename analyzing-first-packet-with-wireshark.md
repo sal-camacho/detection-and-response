@@ -48,7 +48,7 @@ Scrolled down to the packet list until a packet is listed where the info column 
 
 ## Task 2. Apply a basic Wireshark filter and inspect a packet
 Opened a packet in Wireshark for more detailed exploration and filtered the data to inspect the network layers and protocols contained in the packet.
-Entered the following filter for traffic associated with a specific IP address. `ip.addr == 142.250.1.139`
+Entered the following filter for traffic associated with a specific IP address: `ip.addr == 142.250.1.139`
 
 <img width="753" height="560" alt="49" src="https://github.com/user-attachments/assets/94deaee4-ac58-4f8b-b38f-321f8d52cbcf" />
 
@@ -81,12 +81,34 @@ The upper section of this window contains subtrees where Wireshark will provide 
 
 ## Task 3. Use filters to select packets
 Used filters to analyze specific network packets based on where the packets came from or where they were sent to. You’ll explore how to select packets using either their physical Ethernet Media Access Control (MAC) address or their Internet Protocol (IP) address.
-Enter the following filter to select traffic for a specific source IP address only. `ip.src == 142.250.1.139`
+Entered the following filter to select traffic for a specific source IP address only: `ip.src == 142.250.1.139`
+
+<img width="751" height="591" alt="52" src="https://github.com/user-attachments/assets/ff4e19e1-53ac-49ef-b6a0-10a9502ea4cd" />
+
+(A filtered list is returned with fewer entries than before. It contains only packets that came from 142.250.1.139.)
+
+Entered the following filter to select traffic for a specific destination IP address only: `ip.dst == 142.250.1.139`
+
+<img width="747" height="588" alt="53" src="https://github.com/user-attachments/assets/2f7cb876-5dc5-4227-a3d4-d03778fcd2ca" />
+
+(A filtered list is returned that contains only packets that were sent to 142.250.1.139.)
 
 
+Entered the following filter to select traffic to or from a specific Ethernet MAC address. This filters traffic related to one MAC address, regardless of the other protocols involved: `eth.addr == 42:01:ac:15:e0:02`
 
+<img width="750" height="586" alt="54" src="https://github.com/user-attachments/assets/b3d7baef-e963-4994-9fa0-adc6f3d11c3a" />
 
+Double-clicked the first packet in the list
 
+<img width="744" height="623" alt="55" src="https://github.com/user-attachments/assets/0031b2b6-d0b1-46ae-9e49-e902827033c6" />
+
+(The MAC address you specified in the filter is listed as either the source or destination address in the expanded Ethernet II subtree.)
+
+#### Double-click the Internet Protocol Version 4 subtree to expand it and scroll down until the Time to Live and Protocol fields appear.
+- The Protocol field in the Internet Protocol Version 4 subtree indicates which IP internal protocol is contained in the packet.
+
+### What is the protocol contained in the Internet Protocol Version 4 subtree from the first packet related to MAC address 42:01:ac:15:e0:02?
+### Answer: TCP is the internal protocol contained in the first packet from MAC address 42:01:ac:15:e0:02.
 
 
 ---
