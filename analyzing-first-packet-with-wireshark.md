@@ -21,11 +21,6 @@ identify the source and destination IP addresses involved in this web browsing s
 examine the protocols that are used when the user makes the connection to the website, and
 analyze some of the data packets to identify the type of information sent and received by the systems that connect to each other when the network data is captured.
 
-## Task 1. Explore data with Wireshark
-Opened a network packet capture file that contains data captured from a system that made web requests to a site.
-
-<img width="1920" height="932" alt="47" src="https://github.com/user-attachments/assets/ce2fd91e-5ddd-4d7f-b21e-cebb5f372f00" />
-
 ### An overview of the key property columns listed for each packet:
 - No. : The index number of the packet in this packet capture file
 - Time: The timestamp of the packet
@@ -35,10 +30,23 @@ Opened a network packet capture file that contains data captured from a system t
 - Length: The total length of the packet
 - Info: Some infomation about the data in the packet (the payload) as interpreted by Wireshark
 
+
+## Task 1. Explore data with Wireshark
+Opened a network packet capture file that contains data captured from a system that made web requests to a site and scrolled down the packet list until a packet is listed where the info column starts with the words 'Echo (ping) request'.
+
+<img width="1920" height="932" alt="47" src="https://github.com/user-attachments/assets/ce2fd91e-5ddd-4d7f-b21e-cebb5f372f00" />
+<img width="746" height="563" alt="48" src="https://github.com/user-attachments/assets/aabbb053-f058-4df6-a602-0c2065e98449" />
+
+### Question: What is the protocol of the first packet in the list where the info column starts with the words 'Echo (ping) request'?
+### Answer: ICMP
+
 ## Network Analysis — Analyze Your First Packet
 
-This report was completed as part of the Google Cybersecurity Certificate. It documents how to analyze a packet capture file using Wireshark. These tasks are essential for network monitoring, incident response, and foundational packet analysis skills.
+This analysis was completed as part of the Google Cybersecurity Certificate. It documents how to analyze a packet capture file using Wireshark. These tasks are essential for network monitoring, incident response, and foundational packet analysis skills.
 
+## Task 2. Apply a basic Wireshark filter and inspect a packet
+Opened a packet in Wireshark for more detailed exploration and filter the data to inspect the network layers and protocols contained in the packet.
+Entered the following filter for traffic associated with a specific IP address. ip.addr == 142.250.1.139
 ---
 
 ## My Contributions
