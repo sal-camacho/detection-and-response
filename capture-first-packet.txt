@@ -1,1 +1,33 @@
+Step 1: Identify network interfaces
+Used ifconfig to identify the interfaces that are available
 
+analyst@391ba7e2aca7:~$ sudo ifconfig
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1460
+        inet 172.18.0.2  netmask 255.255.0.0  broadcast 172.18.255.255
+        ether 02:42:ac:12:00:02  txqueuelen 0  (Ethernet)
+        RX packets 878  bytes 13959269 (13.3 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 571  bytes 47460 (46.3 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 58  bytes 8804 (8.5 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 58  bytes 8804 (8.5 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+Step 1A: 
+
+analyst@391ba7e2aca7:~$ sudo tcpdump -D
+1.eth0 [Up, Running, Connected]
+2.any (Pseudo-device that captures on all interfaces) [Up, Running]
+3.lo [Up, Running, Loopback]
+4.bluetooth-monitor (Bluetooth Linux Monitor) [Wireless]
+5.nflog (Linux netfilter log (NFLOG) interface) [none]
+6.nfqueue (Linux netfilter queue (NFQUEUE) interface) [none]
+7.dbus-system (D-Bus system bus) [none]
+8.dbus-session (D-Bus session bus) [none]
+analyst@391ba7e2aca7:~$ 
