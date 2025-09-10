@@ -17,13 +17,19 @@ Your Linux user's home directory contains a sample packet capture file that you 
 This report was completed as part of the Google Cybersecurity Certificate. It documents how to use Linux Bash commands to capture and inspect network traffic. These tasks are foundational for network monitoring, packet analysis, and hands-on cybersecurity workflows.
 
 ## Tools Used
-- ifconfig — to identify network interfaces
-- tcpdump -D — to list available capture interfaces
-- tcpdump — to capture, filter, and inspect packet data
-- curl — to generate HTTP traffic for analysis
-- ls — to verify file creation
-- tcpdump -r — to read saved .pcap files
-- tcpdump -X — to view packet contents in hex/ASCII
+- `ifconfig` — to identify network interfaces  
+- `tcpdump -D` — to list available capture interfaces  
+- `tcpdump -i` — to specify the interface for packet capture  
+- `tcpdump -v` — to display verbose packet details  
+- `tcpdump -nn` — to disable name resolution for IPs and ports  
+- `tcpdump -c` — to limit the number of packets captured  
+- `tcpdump -w` — to write captured packets to a `.pcap` file  
+- `tcpdump -r` — to read saved `.pcap` files  
+- `tcpdump -X` — to view packet contents in hex/ASCII  
+- `curl` — to generate HTTP traffic for analysis  
+- `ls` — to verify file creation  
+- `Ctrl+C` — to stop live capture
+
 
 ## Reflections
 - Capturing live traffic helped me understand how data flows through a network interface.
