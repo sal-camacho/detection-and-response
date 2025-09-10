@@ -23,6 +23,20 @@ This report was completed as part of the Google Cybersecurity Certificate. It do
 - Loaded and reviewed saved packet data using tcpdump read options, including hexadecimal and ASCII views
 - Practiced foundational skills in packet analysis, including identifying source/destination, protocol behavior, and traffic direction
 
+## Testing My Knowledge
+**Q1: What command would you use to capture 3 packets on any interface with the verbose option?**  
+A: `sudo tcpdump -c3 -i any -v`
+
+**Q2: What does the `-i` option indicate?**  
+A: The network interface to monitor
+
+**Q3: What type of information does the `-v` option include?**  
+A: Verbose information
+
+**Q4: What `tcpdump` command can you use to identify the interfaces that are available to perform a packet capture on?**  
+A: `sudo tcpdump -D`
+
+
 ## Tools Used
 - `ifconfig` — to identify network interfaces  
 - `tcpdump -D` — to list available capture interfaces  
