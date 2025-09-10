@@ -28,8 +28,7 @@ This report was completed as part of the Google Cybersecurity Certificate. It do
 - `tcpdump -X` — to view packet contents in hex/ASCII  
 - `curl` — to generate HTTP traffic for analysis  
 - `ls` — to verify file creation  
-- `Ctrl+C` — to stop live capture
-
+- `sudo` — to execute privileged commands like `tcpdump` that require root access
 
 ## Reflections
 - Capturing live traffic helped me understand how data flows through a network interface.
