@@ -7,14 +7,21 @@ In this activity, you’ll perform tasks associated with using tcpdump to captur
 ## Scenario
 
 You’re a network analyst who needs to use tcpdump to capture and analyze live network traffic from a Linux virtual machine.
-
-The lab starts with your user account, called analyst, already logged in to a Linux terminal.
-
+It starts with your user account, called analyst, already logged in to a Linux terminal.
 Your Linux user's home directory contains a sample packet capture file that you will use at the end of the lab to answer a few questions about the network traffic that it contains.
 
 ## Linux Networking — Capture Your First Packet
 
 This report was completed as part of the Google Cybersecurity Certificate. It documents how to use Linux Bash commands to capture and inspect network traffic. These tasks are foundational for network monitoring, packet analysis, and hands-on cybersecurity workflows.
+
+## My Contributions
+- Identified available network interfaces using Linux commands to determine where packet capture could occur
+- Used tcpdump to inspect live network traffic and observe how packets flow through a selected interface
+- Captured a sample of HTTP traffic and saved it to a .pcap file for later analysis
+- Interpreted verbose output from tcpdump to understand packet structure, including IP headers, flags, and protocol details
+- Applied filters to focus on specific traffic types (e.g., port 80) and reduce noise in the capture
+- Loaded and reviewed saved packet data using tcpdump read options, including hexadecimal and ASCII views
+- Practiced foundational skills in packet analysis, including identifying source/destination, protocol behavior, and traffic direction
 
 ## Tools Used
 - `ifconfig` — to identify network interfaces  
