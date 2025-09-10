@@ -10,6 +10,8 @@ You’re a network analyst who needs to use tcpdump to capture and analyze live 
 It starts with your user account, called analyst, already logged in to a Linux terminal.
 Your Linux user's home directory contains a sample packet capture file that you will use at the end of the lab to answer a few questions about the network traffic that it contains.
 
+---
+
 ## Linux Networking — Capture Your First Packet
 
 This report was completed as part of the Google Cybersecurity Certificate. It documents how to use Linux Bash commands to capture and inspect network traffic. These tasks are foundational for network monitoring, packet analysis, and hands-on cybersecurity workflows.
