@@ -14,22 +14,21 @@ In your role as a cybersecurity analyst, you have been asked to research the dif
 
 This report was completed as part of the Google Cybersecurity Certificate. It documents the core features of Wireshark and tcpdump, compares their functionality, and highlights how each tool supports packet analysis in different environments.
 
-## My Contributions
+<img width="812" height="785" alt="63" src="https://github.com/user-attachments/assets/00d0a632-737e-48d4-ae2a-7f0ad0d2b692" />
 
+## My Contributions
 - Researched official documentation for Wireshark and tcpdump to identify key features and limitations
 - Compared GUI-based and CLI-based workflows for packet capture and inspection
 - Documented similarities between both tools, including their ability to save and filter packet data
 - Created a side-by-side comparison table to highlight differences in interface, filtering, protocol support, and use cases
 
 ## Tools Used
-
 - Wireshark User Guide (Section 1.1.2, 1.1.6, 3.3, 8.4–8.8) — for GUI features, protocol dissection, and visualization tools
 - tcpdump Tutorials and Man Pages — for command-line usage, filtering syntax, and performance considerations
 
 ## Reflections
-
-- Capturing live traffic helped me understand how data flows through a network interface.
-- Using tcpdump reinforced the importance of filtering and saving relevant packet data.
-- Generating traffic with curl showed how application-layer activity appears in raw packet captures.
-- Viewing packet data in hex and ASCII simulated real-world forensic analysis and deep packet inspection.
-- This exercise strengthened my confidence in using Linux tools for hands-on network analysis.
+- Wireshark’s GUI made it easier to visualize packet flow and dissect protocols in depth.
+- tcpdump’s lightweight CLI interface is ideal for quick captures and remote diagnostics.
+- Understanding the differences in filtering capabilities helped clarify when to use each tool.
+- Comparing both tools reinforced the importance of choosing the right analyzer based on environment and task.
+- This research activity improved my ability to evaluate cybersecurity tools and communicate their strengths clearly.
