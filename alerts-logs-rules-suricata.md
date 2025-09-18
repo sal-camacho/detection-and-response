@@ -32,22 +32,23 @@ Let’s define the files you’ll be working with in this activity:
 
 This report was completed as part of the Google Cybersecurity Certificate. It documents the process of creating a custom Suricata rule, triggering alerts using a sample packet capture, and analyzing the resulting logs to understand Suricata’s detection capabilities.
 
-## 🛠️ My Contributions
+## My Contributions
 - Wrote and tested a custom Suricata rule targeting HTTP GET requests from the home network to external destinations
 - Ran Suricata against a `sample.pcap` file to simulate network traffic and trigger alerts
 - Analyzed `fast.log` and `eve.json` outputs to interpret alert metadata and network flow details
 - Used `jq` to extract structured JSON data for deeper inspection of Suricata’s event logging
 - Documented rule syntax, log formats, and command-line usage for reproducibility
 
-## 🧪 Tools Used
+## Tools Used
 - Suricata CLI (`suricata -r sample.pcap -S custom.rules -k none`) — for rule testing and packet inspection
 - `fast.log` — for quick alert verification
 - `eve.json` — for detailed event logging in JSON format
 - `jq` — for parsing and querying JSON logs
 - Bash shell — for executing commands and navigating log directories
 
-## 📊 Rule Breakdown
-
-```plaintext
-alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"GET on wire"; flow:established,to_server; content:"GET"; http_method; sid:12345; rev:3;)
-
+## Reflections
+- Writing custom rules helped reinforce the structure and logic behind IDS signatures.
+- Suricata’s layered logging system provides both quick and deep insights into network events.
+- Using jq to extract specific fields from eve.json improved my ability to correlate alerts with network flows.
+- This activity strengthened my understanding of how IDS tools integrate into broader detection workflows.
+- Documenting rule behavior and log outputs enhanced my ability to communicate technical findings clearly.
