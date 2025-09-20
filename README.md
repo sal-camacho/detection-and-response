@@ -10,7 +10,7 @@ Reports include packet inspection, rule-based alerting, log analysis, and protoc
 
 As a Security Analyst in training, I’ve applied foundational detection and response skills to simulate real-world investigations and security operations. These walkthroughs demonstrate how I capture network traffic, analyze logs, and document findings using markdown and evidence-based techniques.
 
-My work aligns with the **NIST Cybersecurity Framework (CSF)** and documents activity across its five domains: **Identify, Protect, Detect, Respond, and Recover**.
+My work aligns with the NIST Cybersecurity Framework (CSF) and documents activity across its five domains: Identify, Protect, Detect, Respond, and Recover.
 
 ---
 
