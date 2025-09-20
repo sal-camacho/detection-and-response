@@ -12,7 +12,7 @@ As a Security Analyst in training, I’ve applied foundational detection and res
 
 My work aligns with the NIST Cybersecurity Framework (CSF) and documents activity across its five domains: Identify, Protect, Detect, Respond, and Recover.
 
-### This Repo Features
+This repo features:
 
 - Packet capture and inspection using Wireshark  
 - Suricata rule creation and alert validation  
@@ -38,5 +38,4 @@ My work aligns with the NIST Cybersecurity Framework (CSF) and documents activit
 
 ## Contact & Collaboration
 
-This repo is an active reflection of my cybersecurity journey. I'm open to feedback, collaboration, and discussions on how to further strengthen documentation clarity and technical depth. Whether you're a fellow learner or seasoned analyst, I welcome insights that help refine my investigative approach.
-
+This repo is an active reflection of my cybersecurity journey. I'm open to feedback, collaboration, and discussions on how to further strengthen documentation clarity and technical depth.
