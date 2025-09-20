@@ -17,10 +17,8 @@ This repo features:
 - Packet capture and inspection using Wireshark  
 - Suricata rule creation and alert validation  
 - Log analysis and event correlation  
-- Protocol research and threat modeling  
-- Markdown-based incident documentation  
-- Alignment with NICE work roles and CSF domains
-
+- Protocol research and threat modeling
+  
 ---
 
 ## Report Index
