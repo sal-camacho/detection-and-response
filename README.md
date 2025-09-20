@@ -1,6 +1,6 @@
 # Detection and Response Portfolio
 
-This repository contains incident analysis walkthroughs, packet capture exercises, and threat detection reports completed as part of **Course 6 of the Google Cybersecurity Certificate**. Each file documents key investigation techniques and demonstrates how to detect, analyze, and respond to suspicious activity using open-source tools and structured reporting.
+This repository contains incident analysis walkthroughs, packet capture exercises, and threat detection reports completed as part of Google Cybersecurity Certificate. Each file documents key investigation techniques and demonstrates how to detect, analyze, and respond to suspicious activity using open-source tools and structured reporting.
 
 Reports include packet inspection, rule-based alerting, log analysis, and protocol research—all aligned with best practices for cybersecurity readiness and incident response.
 
