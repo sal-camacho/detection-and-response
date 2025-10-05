@@ -28,7 +28,7 @@ Let’s define the files you’ll be working with in this activity:
 
 ---
 
-# Intrusion Detection with Suricata — Rule Creation & Log Analysis
+## Intrusion Detection with Suricata — Rule Creation & Log Analysis
 
 This report was completed as part of the Google Cybersecurity Certificate. It documents the process of creating a custom Suricata rule, triggering alerts using a sample packet capture, and analyzing the resulting logs to understand Suricata’s detection capabilities.
 
